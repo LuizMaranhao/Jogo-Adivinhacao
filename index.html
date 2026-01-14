@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Jogo de Adivinhação</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Jogo de Adivinhação</h1>
+        <p>Tente descobrir o número secreto entre 1 e 100!</p>
+        
+        <input type="number" id="inputPalpite" placeholder="Seu palpite">
+        
+        <button onclick="verificarPalpite()">Chutar</button>
+
+        <p id="feedback"></p> 
+        <p>Tentativas restantes: <span id="displayTentativas">10</span></p>
+    </div>
+    
+    <script src="jogo.js"></script>
+</body>
+</html>
