@@ -54,4 +54,34 @@ function verificarPalpite() {
 // Função auxiliar para encerrar o jogo
 function desativarJogo() {
     document.getElementById("inputPalpite").disabled = true;
+    /* PASSO A PASSO PARA REINICIAR:
+  1. Criar a função 'reiniciarJogo'
+  2. Sortear um novo número secreto
+  3. Resetar as tentativas para 10
+  4. Limpar as mensagens de feedback
+  5. Habilitar o input novamente
+*/
+
+function desativarJogo() {
+    document.getElementById("inputPalpite").disabled = true;
+    // Mostra o botão de reiniciar quando o jogo acaba
+    document.getElementById("btnReiniciar").style.display = "block";
+}
+
+function reiniciarJogo() {
+    // 1. Gera novo número e reseta tentativas
+    numeroSecreto = Math.floor(Math.random() * 100) + 1;
+    tentativasRestantes = 10;
+
+    // 2. Limpa a interface
+    document.getElementById("inputPalpite").disabled = false;
+    document.getElementById("inputPalpite").value = "";
+    document.getElementById("feedback").innerText = "";
+    document.getElementById("displayTentativas").innerText = tentativasRestantes;
+    
+    // 3. Esconde o botão de reiniciar novamente
+    document.getElementById("btnReiniciar").style.display = "none";
+    
+    console.log("Novo número secreto: " + numeroSecreto);
+}
 }
